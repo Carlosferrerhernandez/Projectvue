@@ -15,11 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-/*Ruta inicio*/
-Route::get('/', function () {
-    if (Auth::guest()) {
-        return view('welcome');  
-        //auth/login
-    }
-        return view('/');
-})->name('inicio');
+Route::get('/usuarios', 'UsuarioController@index');
